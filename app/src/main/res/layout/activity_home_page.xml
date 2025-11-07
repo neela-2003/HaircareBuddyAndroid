@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/menuIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/menu_pic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="HAIR CARE BUDDY"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/menuIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nourish your hair"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/appTitle"
+            app:layout_constraintStart_toStartOf="@id/appTitle" />
+
+        <View
+            android:id="@+id/dividerLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/appSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/hairImage"
+            android:layout_width="408dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hair_image"
+            app:layout_constraintTop_toBottomOf="@id/dividerLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/embraceLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="284dp"
+            android:text="Embrace"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/embraceLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/embraceLine1"
+            app:layout_constraintStart_toStartOf="@id/embraceLine1"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/embraceLine3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shine"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/embraceLine2"
+            app:layout_constraintStart_toStartOf="@id/embraceLine2"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/quizPrompt"
+            android:layout_width="307dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="396dp"
+            android:padding="12dp"
+            android:text="Take the FREE hair Quiz!"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.186"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appSubtitle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/analyseButton"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="#FE95AD"
+            android:text="Analysis your hair"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:cornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hairImage" />
+
+        <View
+            android:id="@+id/bottomLine"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginBottom="80dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Drawer Content -->
+    <LinearLayout
+        android:id="@+id/leftDrawer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/menuLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnPage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor Status"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnPage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rating and Review"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnPage3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

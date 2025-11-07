@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/female"
+            android:contentDescription="User"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Abii"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/userImage"
+            app:layout_constraintTop_toTopOf="@id/userImage" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Age: 25"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Gender -->
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Gender: Female"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvAge"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Mobile -->
+        <TextView
+            android:id="@+id/tvMobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mobile no: 9876543210"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvGender"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

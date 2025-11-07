@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF">
+
+    <!-- Header Background -->
+    <View
+        android:id="@+id/headerBackground"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="#FFAEC9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Back Button -->
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Profile"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="@id/headerBackground"
+        app:layout_constraintBottom_toBottomOf="@id/headerBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Delete Icon -->
+    <ImageView
+        android:id="@+id/deleteIcon"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/delete"
+        app:layout_constraintTop_toBottomOf="@id/headerBackground"
+        app:layout_constraintEnd_toEndOf="@id/headerBackground" />
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/userprofile"
+        app:layout_constraintTop_toBottomOf="@id/headerBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Name Box -->
+    <TextView
+        android:id="@+id/nameBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginHorizontal="60dp"
+        android:background="#3AE91E63"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:hint="Name"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Phone Box -->
+    <TextView
+        android:id="@+id/phoneBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="60dp"
+        android:background="#3AE91E63"
+        android:gravity="center"
+        android:hint="Phone Number"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/nameBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/emailBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="60dp"
+        android:background="#3AE91E63"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:hint="Gmail"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/phoneBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+    <!-- Password Box -->
+    <TextView
+        android:id="@+id/passwordBox"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="60dp"
+        android:background="#3AE91E63"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:hint="Password"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/emailBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

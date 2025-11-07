@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChoosePage">
+    <ImageView
+        android:id="@+id/box"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/pink_box"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/box2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/white_box"
+        app:layout_constraintTop_toTopOf="@id/box"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/user"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/user"
+        android:layout_marginTop="95dp"
+        android:contentDescription="User profile image button"
+        app:layout_constraintTop_toBottomOf="@id/doc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/doc"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/doctor"
+        android:contentDescription="Doctor profile image button"
+        app:layout_constraintTop_toTopOf="@id/box2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="DOCTOR"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/doc"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="USER"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/user"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

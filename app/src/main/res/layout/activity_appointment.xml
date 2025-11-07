@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="0dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="20dp"
+            android:background="#F58DAE"
+            android:gravity="center"
+            android:text="APPOINTMENT"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="16dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Back"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="@id/tvHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvHeader" />
+
+        <!-- Doctor Image -->
+        <ImageView
+            android:id="@+id/ivDoctorImage"
+            android:layout_width="0dp"
+            android:layout_height="290dp"
+            android:layout_marginTop="32dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/doctor_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeader" />
+
+        <!-- Floating Doctor Info Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDoctorInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="-40dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#CF3F51B5"
+            app:layout_constraintTop_toBottomOf="@id/ivDoctorImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:text="Dr. Ali Uzair"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Senior Cardiologist and Surgeon"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Mirpur Medical College and Hospital"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Appointment Date -->
+        <TextView
+            android:id="@+id/tvDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Appointment date"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/cardDoctorInfo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etAppointmentDate"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:hint="Select Date"
+            android:focusable="false"
+            android:background="@drawable/edittext_background"
+            android:textColor="#000000"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDateLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/tvTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Fixed Time"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/etAppointmentDate"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etAppointmentTime"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:hint="Select Time"
+            android:focusable="false"
+            android:background="@drawable/edittext_background"
+            android:textColor="#000000"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Book Button -->
+        <Button
+            android:id="@+id/btnBookAppointment"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#F58DAE"
+            android:text="Book an appointment"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/etAppointmentTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
